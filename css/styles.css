@@ -1,25 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
 
 .container {
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template: 1fr 4fr / 1fr 4fr;
+    grid-template: 1fr 5fr / 1fr 4fr;
     grid-template-areas: 
         "sidebar header"
         "sidebar main";   
 }
 
 .header-container {
-    background-color: azure;
+    background-color: #ffffff;
     grid-area: header;
 }
 
-.sidebar-container {
-    background-color: aqua;
-    grid-area: sidebar;
-}
-
 .main-container {
-    background-color: grey;
+    background-color: #e2e8f0;
     grid-area: main;
 }
+
+
+.sidebar-container {
+    background-color: #1992d4;
+    grid-area: sidebar;
+    color: #ffffff;
+    display: grid;
+    grid-template-rows: 1.5fr .5fr repeat(13, 1fr);
+    grid-template-areas: 
+        "dash"
+        "."
+        "ho"
+        "p"
+        "m"
+        "hi"
+        "t"
+        "c"
+        "."
+        "sett"
+        "supp"
+        "priva";
+}
+
+.nav-header { 
+    grid-area: dash;
+}
+
+.home { grid-area: ho;}
+.profile { grid-area: p;}
+.messages { grid-area: m;}
+.history { grid-area: hi;}
+.tasks { grid-area: t;}
+.comm { grid-area: c;}
+.settings { grid-area: sett;}
+.support { grid-area: supp;}
+.priva { grid-area: priva;}
+
+.nav-header,
+.nav-item {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.icon > img {
+    height: 24px;
+    width: 24px;
+}
+
+img.dashboard-icon {
+    height: 48px;
+    width: 48px;
+}
+
+h1.dash-text {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+.icon,
+.dashboard-icon {
+    align-self: center;
+    justify-self: center;
+}
+
+.nav-text,
+.dash-text {
+    align-self: center;
+    font-size: 1.3rem;
+}
+
+
