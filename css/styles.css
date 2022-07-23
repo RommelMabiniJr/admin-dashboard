@@ -5,6 +5,15 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
 
 .container {
     height: 100vh;
@@ -73,7 +82,8 @@
     width: 24px;
 }
 
-img.dashboard-icon {
+img.dashboard-icon,
+.profile.mini > img {
     height: 48px;
     width: 48px;
 }
@@ -87,6 +97,7 @@ a {
     text-decoration: none;
     color: inherit;
     font-weight: bold;
+    align-items: center;
 }
 
 .icon,
@@ -101,4 +112,89 @@ a {
     font-size: 1.3rem;
 }
 
+.profile.full > img {
+    height: 84px;
+    width: 84px;
+}
 
+.header-container {
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    padding: 0 60px;
+}
+
+.user-info,
+.search-div,
+.profile-action {
+    display: flex;
+}
+
+.search-div,
+.profile-action {
+    align-items: center;
+}
+
+.search-div > input[type = "search"] {
+    flex: 1;
+    background-color: #e1e7ef;
+    border-radius: 20px;
+    border: none;
+    height: 36px;
+    padding: 10px;
+    margin-right: 40px;
+}
+
+input[type = "search"]:focus {
+    outline: none;
+}
+
+
+.search-icon img {
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.profile.full img {
+    margin: 10px 0;
+    margin-right: 20px;
+    
+}
+
+.profile-action {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile-action > a {
+    margin: 15px;
+}
+
+.greeting-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.greeting-message p {
+    font-weight: bold;
+    margin: 0;
+}
+
+.name.username { font-size: 2rem;}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-buttons button {
+    background-color: #1991d2;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    height: 40px;
+    width: 105px;
+    font-weight: bold;
+    font-size: 1rem;
+}
