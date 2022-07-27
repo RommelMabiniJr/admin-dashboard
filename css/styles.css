@@ -34,18 +34,20 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .header-container {
-    background-color: #ffffff;
+    background-color: #f7e7ff;
     grid-area: header;
+    -webkit-box-shadow: 0 8px 2px -2px #BDBDBD;
+    box-shadow: 0 8px 2px -2px #BDBDBD;
 }
 
 .main-container {
-    background-color: #e2e8f0;
+    background-color: #d3d3d3;
     grid-area: main;
 }
 
 
 .sidebar-container {
-    background-color: #1992d4;
+    background-color: #343234;
     grid-area: sidebar;
     color: #ffffff;
     display: grid;
@@ -146,7 +148,7 @@ a {
 
 .search-div > input[type = "search"] {
     flex: 1;
-    background-color: #e1e7ef;
+    background-color: #ffffff;
     border-radius: 20px;
     border: none;
     height: 36px;
@@ -201,7 +203,7 @@ input[type = "search"]:focus {
 }
 
 .action-buttons button {
-    background-color: #1991d2;
+    background-color: #9a85a5;
     color: #ffffff;
     border: none;
     border-radius: 25px;
@@ -225,9 +227,6 @@ input[type = "search"]:focus {
 h3 {
     font-size: 1.5rem;
     font-weight: 500;
-}
-
-h3 {
     margin: 15px 0;
 }
 
@@ -239,16 +238,16 @@ h3 {
 }
 
 .card {
-    background-color: #f0b428;
+    background-color: #d81159;
     border-radius: 10px;
     padding-left: 8px;
+    display: grid;
     overflow: hidden;
 }
 
 .card .white-box {
     background-color: #ffffff;
     padding: 25px;
-    height: 100%;
     line-height: 20px;
     display: flex;
     flex-direction: column;
@@ -275,6 +274,7 @@ h3 {
 
 .project-icon-container {
     align-self: flex-end;
+    justify-self: flex-end;
     margin-top: 25px;
 }
 
@@ -339,5 +339,5 @@ h3 {
 
 .card,
 .vertical-card {
-    box-shadow: 2px 2px 5px 0 #b8b8b8;
+    box-shadow: 2px 2px 5px 0 grey;
 }
