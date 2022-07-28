@@ -43,6 +43,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .main-container {
     background-color: #d3d3d3;
     grid-area: main;
+    overflow: scroll;
 }
 
 
